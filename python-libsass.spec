@@ -7,7 +7,8 @@ Summary:        Python bindings for libsass
 Group:          Development/Python
 License:        MIT
 URL:            https://github.com/sass/libsass-python
-Source0:        %{url}/archive/%{version}/%{srcname}-python-%{version}.tar.gz
+Source0:        https://pypi.io/packages/source/l/libsass/libsass-%{version}.tar.gz
+
 
 BuildRequires:  python-devel
 BuildRequires:  python-six
@@ -25,7 +26,7 @@ sass which is binding Libsass (written in C/C++ by Hampton
 Catlin and Aaron Leung).
 
 %prep
-%autosetup -n %{srcname}-python-%{version} -p1
+%autosetup -n libsass-%{version} -p1
 
 %build
 # Export SYSTEM_SASS environment variable to use the
