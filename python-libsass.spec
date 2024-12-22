@@ -1,7 +1,7 @@
 %global srcname libsass
 
 Name:           python-%{srcname}
-Version:        0.22.0
+Version:        0.23.0
 Release:        1
 Summary:        Python bindings for libsass
 Group:          Development/Python
