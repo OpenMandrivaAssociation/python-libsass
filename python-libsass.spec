@@ -7,7 +7,7 @@ Summary:        Python bindings for libsass
 Group:          Development/Python
 License:        MIT
 URL:            https://github.com/sass/libsass-python
-Source0:        %{url}/archive/%{version}/%{srcname}-%{version}.tar.gz
+Source0:        %{url}/archive/%{version}/%{srcname}-python-%{version}.tar.gz
 
 BuildRequires:  python-devel
 BuildRequires:  python-six
