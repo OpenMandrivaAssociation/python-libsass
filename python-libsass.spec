@@ -31,6 +31,8 @@ Catlin and Aaron Leung).
 sed -i -e '/^#!\//, 1d' pysassc.py
 
 %build
+export CC=gcc
+export CXX=g++
 # Export SYSTEM_SASS environment variable to use the
 # system library, not the bundled one
 export SYSTEM_SASS="true"
