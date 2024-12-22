@@ -17,7 +17,7 @@ BuildRequires:  pkgconfig(libsass)
 # Needed for docs
 #BuildRequires:  python-sphinx
 
-Requires:       python3-six
+Requires:       python-six
 
 %description
 This package provides a simple Python extension module
@@ -30,12 +30,12 @@ Catlin and Aaron Leung).
 %build
 # Export SYSTEM_SASS environment variable to use the
 # system library, not the bundled one
-export SYSTEM_SASS="true"
+#export SYSTEM_SASS="true"
 %py_build
 
 %install
 # Same as above
-export SYSTEM_SASS="true"
+#export SYSTEM_SASS="true"
 %py_install
 #install -m 644 -D docs/_build/man/pysassc.1 %{buildroot}%{_mandir}/man1/pysassc.1
 
