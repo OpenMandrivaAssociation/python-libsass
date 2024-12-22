@@ -47,12 +47,10 @@ export SYSTEM_SASS="true"
 %files
 %license LICENSE
 %doc README.rst
-#{python3_sitearch}/__pycache__/*
 %{python3_sitearch}/_sass*.so
-#{python3_sitearch}/%{srcname}-%{version}.dist-info/
+%{python3_sitearch}/libsass-%{version}-py*.*.egg-info
 %{python3_sitearch}/sass.py
 %{python3_sitearch}/pysassc.py
 %{python3_sitearch}/sasstests.py
 %{python3_sitearch}/sassutils/
-#{_mandir}/man1/pysassc.1.*
 %{_bindir}/pysassc
