@@ -2,7 +2,7 @@
 
 Name:           python-%{srcname}
 Version:        0.23.0
-Release:        1
+Release:        2
 Summary:        Python bindings for libsass
 Group:          Development/Python
 License:        MIT
