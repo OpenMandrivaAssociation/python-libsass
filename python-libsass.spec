@@ -2,24 +2,25 @@
 
 Name:           python-%{srcname}
 Version:        0.23.0
-Release:        2
+Release:        3
 Summary:        Python bindings for libsass
 Group:          Development/Python
 License:        MIT
 URL:            https://github.com/sass/libsass-python
 Source0:        %{url}/archive/%{version}/%{srcname}-python-%{version}.tar.gz
+# Python 3.15 removed distutils; setup.py still imports it
+Patch0:         python-libsass-0.23.0-distutils.patch
 
-
-BuildRequires:  python-devel
-BuildRequires:  python-setuptools
-BuildRequires:  python-six
+BuildRequires:  pkgconfig(python3)
+BuildRequires:  python%{pyver}dist(setuptools)
+BuildRequires:  python%{pyver}dist(six)
 #BuildRequires:  python3-pytest
-BuildRequires:  python-werkzeug
+BuildRequires:  python%{pyver}dist(werkzeug)
 BuildRequires:  pkgconfig(libsass)
 # Needed for docs
 #BuildRequires:  python-sphinx
 
-Requires:       python-six
+Requires:       python%{pyver}dist(six)
 
 %description
 This package provides a simple Python extension module

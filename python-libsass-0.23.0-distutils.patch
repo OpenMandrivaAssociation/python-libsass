@@ -1,0 +1,12 @@
+--- libsass-python-0.23.0.orig/setup.py	2026-10-14 01:10:52.414482067 +0200
++++ libsass-python-0.23.0/setup.py	2026-10-14 01:10:52.430656433 +0200
+@@ -6,6 +6,9 @@
+ import sys
+ import tempfile
+ 
++import setuptools._distutils as _distutils
++sys.modules.setdefault("distutils", _distutils)
++
+ import distutils.cmd
+ import distutils.log
+ import distutils.sysconfig
